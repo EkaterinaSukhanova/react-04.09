@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import CommentsForm from 'components/CommentsForm';
 
-export default class CommentsFormContainer extends PureComponent {
+export default class CommentsFormContainer extends Component {
     constructor(props){
         super(props);
 

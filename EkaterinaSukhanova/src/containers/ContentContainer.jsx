@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Content from 'components/Content';
 
-export default class ContentContainer extends PureComponent{
+export default class ContentContainer extends Component{
     constructor(props){
         super(props);
 
@@ -39,8 +39,7 @@ export default class ContentContainer extends PureComponent{
 
         return (
             <Fragment>
-                <Content onLoadMore={this.loadMore} posts={posts} />
-                {loading && 'Loading...'}
+                <Content onLoadMore={this.loadMore} posts={posts} loading={loading} />
             </Fragment>
         )
     }

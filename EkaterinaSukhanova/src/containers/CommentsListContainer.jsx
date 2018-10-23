@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import CommentsList from 'components/CommentsList';
 
-export default class CommentsListContainer extends PureComponent{
+export default class CommentsListContainer extends Component{
     constructor(props){
         super(props);
 
@@ -39,8 +39,7 @@ export default class CommentsListContainer extends PureComponent{
 
         return (
             <Fragment>
-                <CommentsList onLoadMore={this.loadMore} comments={comments} />
-                {loading && 'Loading...'}
+                <CommentsList onLoadMore={this.loadMore} comments={comments} loading={loading} />
             </Fragment>
         )
     }

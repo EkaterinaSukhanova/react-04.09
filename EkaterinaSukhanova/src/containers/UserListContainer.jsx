@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import UserList from 'components/UserList';
 
-export default class UserListContainer extends PureComponent{
+export default class UserListContainer extends Component{
     constructor(props){
         super(props);
 

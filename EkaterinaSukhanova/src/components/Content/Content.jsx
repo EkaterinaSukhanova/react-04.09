@@ -8,7 +8,7 @@ import classNames from 'classnames';
 export default class Content extends PureComponent {
 
     render(){
-        const { posts, onLoadMore } = this.props;
+        const { posts, onLoadMore, loading} = this.props;
 
         return(
             <main className='content'>
@@ -20,6 +20,7 @@ export default class Content extends PureComponent {
                     </div>
                 )}
                 <Button outline color='primary' className='content-button' onClick={onLoadMore}>Load more</Button>
+                <p>{loading && 'Loading...'}</p>
             </main>
 
         );
