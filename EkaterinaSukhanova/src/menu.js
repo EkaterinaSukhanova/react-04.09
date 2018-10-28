@@ -15,4 +15,8 @@ export default [
         link: '/users',
         text: 'Users',
     },
+    {
+        link: '/chat',
+        text: 'Chat',
+    },
 ]
