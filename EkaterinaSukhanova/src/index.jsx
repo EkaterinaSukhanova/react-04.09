@@ -6,11 +6,6 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import Header from 'components/Header';
-import CommentsListContainer from 'containers/CommentsListContainer';
-import Home from 'components/Home';
-import UserListContainer from 'containers/UserListContainer';
-import ContentContainer from 'containers/ContentContainer';
-import ChatContainer from 'containers/ChatContainer';
 
 import routes from './routes';
 import store from './store';
@@ -18,6 +13,7 @@ import menu from './menu';
 
 class App extends Component {
     render() {
+        console.log('dff');
         return (
             <Fragment>
                 <Header size='big'>
@@ -30,6 +26,10 @@ class App extends Component {
         );
     }
 }
+
+store.subscribe(() => {
+    console.log('subscribe', store.getState());
+});
 
 ReactDom.render(
     <Provider store={store}><BrowserRouter><App/></BrowserRouter></Provider>,

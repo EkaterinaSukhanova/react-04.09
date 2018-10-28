@@ -52,13 +52,14 @@ class ChatContainer extends PureComponent{
 
 }
 
-//отвечает за то , что будет в пропс компонента из стора
+//отвечает за то , что будет в пропс компонента из стора.
+//маппит стейт в пропс реакт компонента. следим за изменениями
 //props те пропеоти которые изначально в компонент были переданы
 //state - все содержимое нашего стора
 function mapStateToProps(state, ownProps) {
     return {
         ...ownProps,
-        messages: state.message.entities, //возьми сообения в редуксе
+        messages: state.messages.entities, //возьми сообения в редуксе
     }
 }
 
